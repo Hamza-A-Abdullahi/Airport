@@ -1,24 +1,16 @@
-class Aircraft():
-    def __init__(self, type,passenger_capacity, aircraft_model, engin_size):
-        self.passenger_cap = passenger_capacity
-        self.aircraft_brand = aircraft_model
-        self.engin_size = engin_size
+class Airplane():
+    def __init__(self, plane_model, company):
+        self.plane_model= plane_model
+        self.company = company
 
+    def get_Airplane(self):
+        return self.plane_model + "," + self.company
 
-class Airplane(Aircraft):
-    def __init__(self, passenger_capacity, aircraft_model, engin_size, staff_onboard):
-        super().__init__(passenger_capacity, aircraft_model, engin_size)
-        self.staff_onboard = staff_onboard
-        self.airplane_list= []
+# class Helicopter():
+#     def __init__(self,passenger_capacity, helicopter_model):
+#         self.passenger_capacity = passenger_capacity
+#         self.helicopter_model = helicopter_model
 
-    def add_passenger_list(self, aircraft_model, passenger_capacity):
-        self.airplane_list.append(aircraft_model)
-        self.airplane_list.append(passenger_capacity)
-
-
-class Helicopter(Aircraft):
-    def __init__(self,passenger_capacity, aircraft_model, engin_size):
-        super().__init__(passenger_capacity, aircraft_model, engin_size)
 
 
 
